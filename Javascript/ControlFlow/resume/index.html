@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#resume-builder-nav" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"><img src="images/logo.png" width="35"></a>
+		    </div>
+
+		    <div class="collapse navbar-collapse" id="resume-builder-nav">    
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Home</a></li>
+		        <li><a href="#">About</a></li>
+		        <li><a href="#">Contact</a></li>
+		        <li><a href="#">Login</a></li>
+		        <li><button type="button" class="btn btn-primary navbar-btn">Sign Up</button></li>		        
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+		<!-- Summary -->
+		<div class="container-fluid summary" id="summary">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-3">
+					<img id="profile" alt="Profile" class="img-responsive">
+				</div>
+				<div class="col-md-5">
+					<h1 id="name"></h1>
+					<hr>
+					<h2 id="occupation"></h2>
+					<h2 id="location"></h2>
+					<h3 id="phone">
+						<span class="glyphicon glyphicon-phone-alt"></span>
+					</h3>
+					<h3 id="email">
+						<span class="glyphicon glyphicon-envelope"></span>
+					</h3>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Skills -->
+		<div class="container skills" id="skills">
+			<div class="row">
+				<h1 class="text-center">Skills</h1>
+			</div>
+			<div class="row">
+				<ul class="list-inline text-center" id="skills-list">
+				</ul>
+			</div>
+			<hr>
+		</div>
+
+		<!-- Experience -->
+		<div class="container experience" id="experience">
+			<div class="row">
+				<h1 class="text-center">Experience</h1>
+			</div>
+		</div>
+
+		<!-- Education -->
+		<div class="container education" id="education">
+			<div class="row">
+				<h1 class="text-center">Education</h1>
+			</div>
+		</div>
+
+		<!-- Contact -->
+		<div class="container contact" id="contact">
+			<div class="row">
+				<h1 class="text-center">Contact</h1>
+			</div>
+			<div class="row">
+				<form>
+					<div class="col-md-6">
+						<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+						  <input type="text" class="form-control" placeholder="First Name">
+						</div>
+						<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+						  <input type="text" class="form-control" placeholder="Last Name">
+						</div>
+						<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
+						  <input type="email" class="form-control" placeholder="Email">
+						</div>
+						<div class="input-group">
+						  <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-phone-alt"></span></span>
+						  <input type="text" class="form-control" placeholder="Phone">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<textarea class="form-control" rows=6></textarea>
+						<button type="submit" class="btn btn-primary btn-lg pull-right">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="data.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>

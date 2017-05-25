@@ -1,0 +1,29 @@
+SUMMARY
+XYZ T-Shirt Co is in a heated competition with its competitor, ABC Apparel.
+XYZ T-Shirt Co has hired your consulting firm to advise them on their pricing strategy.
+
+They have asked your firm to architect an algorithmic approach to pricing one of their 
+t-shirt lines. ABC Apparel sells a very similar - almost identical - t-shirt line. 
+XYZ has determined that if they price their shirts at $50 and ABC Apparel prices their 
+shirts at $50, both companies will sell approximately 200 shirts per day. 
+
+If XYZ cuts their price to $40 per shirt but ABC keeps their price at $50, XYZ expects 
+to maintain their volume of 200 shirts per day but slash ABC's volume to 120 shirts 
+per day. Both brand's customers are loyal, but even loyal customers won't buy when 
+they see competitors offering a deal.
+
+If XYZ keeps their price of $50 per shirt, but ABC cuts their price to $40 per shirt,
+then ABC will continue to sell 200 shirts per day but XYZ will see a decline to 120 
+shirts per day.
+
+If XYZ cuts their price to $40 per shirt and ABC also cuts their price to $40 per shirt,
+both companies will maintain their current sales volume of 200 shirts per day.
+
+
+ASSIGNMENT
+
+
+INPUT
+
+
+OUTPUT

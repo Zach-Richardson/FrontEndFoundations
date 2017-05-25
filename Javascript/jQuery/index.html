@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Zach Richardson is a software engineer and entrepeneur in Boise, ID">
+		<meta name="author" content="Zach Richardson">
+		<meta name="keywords" content="Software Engineer, Boise, Boise Software Engineer">
+		<title>Resume Builder</title>
+		<link rel="icon" href="content/favicon.jpg">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar navbar-default" id="navbar"></nav>
+
+		<!-- Summary -->
+		<div class="container-fluid summary" id="summary"></div>
+
+		<!-- Skills -->
+		<div class="skills container" id="skills">
+			<div class="row">
+				<h1 class="text-center">
+					Skills
+					<button class="btn btn-default pull-right" id="edit-skills">Edit</button>
+				</h1>
+			</div>
+			<div class="row">
+				<ul class="list-inline text-center" id="skills-list"></ul>
+			</div>
+		</div>
+		<div class="container"><hr /></div>
+
+		<!-- Experience -->
+		<div class="container experience" id="experience">
+			<div class="row">
+				<h1 class="text-center">
+					Experience
+					<button class="btn btn-default pull-right" id="edit-experience">Edit</button>
+				</h1>
+			</div>
+		</div>
+		<div class="container"><hr /></div>
+
+		<!-- Education -->
+		<div class="education container" id="education">			
+			<div class="row">
+				<h1 class="text-center">
+					Education
+					<button class="btn btn-default pull-right" id="edit-education">Edit</button>
+				</h1>
+			</div>
+		</div>
+		<div class="container"><hr /></div>
+
+		<!-- Contact -->		
+		<div class="contact container" id="contact">						
+			<div class="row">
+				<h1 class="text-center">
+					Contact
+				</h1>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="app/data.js"></script>
+		<script src="app/controllers/contact.ctrl.js"></script>
+		<script src="app/controllers/entry.ctrl.js"></script>
+		<script src="app/controllers/navbar.ctrl.js"></script>
+		<script src="app/controllers/skills.ctrl.js"></script>
+		<script src="app/controllers/summary.ctrl.js"></script>
+	</body>
+</html>
