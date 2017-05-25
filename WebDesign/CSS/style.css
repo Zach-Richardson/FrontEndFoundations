@@ -1,0 +1,95 @@
+/*-- Global --*/
+body {
+	font-family: 'Roboto';
+	font-weight: 300;
+	color: #555;
+	margin: 0;
+}
+hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: 1px solid rgba(0, 0, 255, 0.3);
+}
+.container {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.container-fluid {
+	width: 100%;
+}
+.text-center {
+	text-align: center;
+}
+/*-- Contact --*/
+.contact {
+	margin-bottom: 50px;
+}
+.contact form div {
+	display: inline-block;
+	width: 50%;
+}
+.contact input {
+	width: 100%;
+	font-size: 1.5em;
+}
+.contact textarea {
+	width: 100%;
+	font-size: 1.5em;
+}
+.contact button {
+	font-size: 1.5em;
+	float: right;
+	background-color: #00f;
+	border-radius: 4px;
+	border-color: #00f;
+	color: #fff;
+}
+.contact .message {
+	float: right;
+}
+
+/*-- Entry --*/
+.entry {	
+	min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+	background-color: #fff;
+	box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+	border-radius: 2px;
+	border: 0;
+}
+
+/*-- Skills --*/
+.skills li {
+	display: inline-block;
+	list-style-type: none;
+	background-color: #00f;
+	color: #fff;
+	font-size: 1.5em;
+	border-radius: 8px;
+	padding: 10px 20px;
+	margin: 5px 10px;
+}
+
+/*-- Summary --*/
+.summary {	
+	background-image: url('https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR688778/site/banner_image_original_1438092449.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 10%;
+	padding-bottom: 15%;
+}
+.summary .photo {
+	display: inline-block;
+	width: 22.5%;
+	margin-left: 22.5%;
+}
+.summary .information {
+	display: inline-block;
+	width: 35%;
+	float: right;
+	background: rgba(255, 255, 255, 0.5);
+	margin-right: 15%;
+	padding: 5px 20px;
+}

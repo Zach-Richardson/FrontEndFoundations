@@ -1,0 +1,66 @@
+body {
+	font-family: 'Roboto';
+	font-weight: 300;
+}
+hr {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border: 1px solid rgba(0, 0, 255, 0.3);
+}
+.glyphicon {
+	color: #00f;
+}
+/*-- Contact --*/
+.contact {
+	margin-bottom: 30px;
+}
+.contact button {
+	margin-top: 15px;
+}
+/*-- Entry --*/
+.entry {
+	margin-top: 30px;
+}
+.entry .well {
+	background-color: #fff;
+	box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+	border-radius: 2px;
+	border: 0;
+}
+.entry li {
+	font-size: 1.5em;
+}
+
+/*-- Skills --*/
+.skills {
+	margin-top: 30px;
+}
+.skills ul {
+	margin-top: 15px;
+}
+.skills li {
+	background-color: #00f;
+	color: #fff;
+	font-size: 2em;
+	border-radius: 8px;
+	padding: 10px 20px;
+	margin: 5px 10px;
+}
+.skills li .badge {
+	background-color: #fff;
+	color: #00f;
+	font-size: 1em;
+	border-radius: 50%;
+}
+
+/*-- Summary --*/
+.summary {	
+	background-image: url('https://storage.googleapis.com/idx-acnt-gs.ihouseprd.com/AR688778/site/banner_image_original_1438092449.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 10%;
+	padding-bottom: 15%;
+}
+.summary .col-md-5 {
+	background-color: rgba(255, 255, 255, 0.5);
+}
