@@ -17,5 +17,10 @@
 
 		var emailText = document.createTextNode(data.summary.email);
 		document.getElementById('email').appendChild(emailText);
+
+		document.getElementById('edit-summary').addEventListener('click', function() {
+			var summary = document.getElementById('summary');
+			summary.removeChild(summary.firstElementChild);
+		});
 	}
 })();

@@ -6,7 +6,7 @@ function run() {
 		$('#content').append('<h1 class="text" id="winner"></h1>');
 		$('#content').append('<table class="table table-striped table-hover"><thead id="stores-header-row"></thead><tbody id="stores"></tbody></table>');
 		
-		var stores = [cooperateStore, defectStore, randomStore, zachStore];		
+		var stores = [jnStore, zachStore];		
 		for(var i=0; i<stores.length; i++) {			
 			stores[i].cooperateCount = 0;
 			stores[i].defectCount = 0;
@@ -36,11 +36,11 @@ function simulate(stores) {
 				var storeOne = stores[i];
 				var storeTwo = stores[j];
 				for(var x=1; x<101; x++) {
-					var moveOne = storeOne.move(x, storeTwo.history);
+					var moveOne = storeOne.move(x, storeTwo.history, storeTwo.cooperateCount, storeTwo.defectCount);
 					if(moveOne === 'cooperate') storeOne.cooperateCount += 1;
 					else storeOne.defectCount += 1;
 
-					var moveTwo = storeTwo.move(x, storeOne.history);
+					var moveTwo = storeTwo.move(x, storeOne.history, storeOne.cooperateCount, storeTwo.defectCount);
 					if(moveTwo === 'cooperate') storeTwo.cooperateCount += 1;
 					else storeTwo.defectCount += 1;
 
@@ -60,13 +60,13 @@ function simulate(stores) {
 function calculateRevenue(moveOne, moveTwo) {
 	if(moveOne === 'cooperate') {
 		if(moveTwo === 'cooperate')
-			return [1000, 1000];
+			return [10000, 10000];
 		else
-			return [600, 800];
+			return [6000, 8000];
 	} else {
 		if(moveTwo === 'cooperate')
-			return [800, 600]
+			return [8000, 6000]
 		else
-			return [800, 800];
+			return [8000, 8000];
 	}
 }

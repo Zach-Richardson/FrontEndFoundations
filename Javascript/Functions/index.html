@@ -4,7 +4,7 @@
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="style.css">
 	</head>
-	<body>
+	<body id="main">
 		<!-- Navbar -->
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
@@ -37,6 +37,9 @@
 					<img id="profile" alt="Profile" class="img-responsive">
 				</div>
 				<div class="col-md-5">
+					<button class="btn btn-default pull-right" id="edit-summary">
+						Edit
+					</button>
 					<h1 id="name"></h1>
 					<hr>
 					<h2 id="occupation"></h2>
@@ -112,10 +115,11 @@
 		</div>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="app/data.js"></script>
-		<script src="app/controllers/summary.ctrl.js"></script>
-		<script src="app/controllers/skills.ctrl.js"></script>
-		<script src="app/controllers/experience.ctrl.js"></script>
+		<script src="data.js"></script>
 		<script src="app/controllers/education.ctrl.js"></script>
+		<script src="app/controllers/experience.ctrl.js"></script>
+		<script src="app/controllers/skills.ctrl.js"></script>
+		<script src="app/controllers/summary.ctrl.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>

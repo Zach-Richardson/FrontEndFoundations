@@ -7,7 +7,7 @@ var zachStore = {
 	revenue: 0
 };
 
-function move(moveNumber, oppHistory) {
+function move(moveNumber, oppHistory, oppCoopCount, oppDefectCount) {
 	if(oppHistory.length > 0) 
 		return oppHistory[oppHistory.length - 1];
 	return Math.random() < 0.5 ? 'cooperate' : 'defect';
