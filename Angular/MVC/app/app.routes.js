@@ -10,14 +10,19 @@
   function config($stateProvider) {
       $stateProvider
         .state('login', {
-            url: '/login',
-            templateUrl: 'app/authentication/login.tpl.html',
-            controller: 'LoginCtrl'
+          url: '/login',
+          templateUrl: 'app/authentication/login.tpl.html',
+          controller: 'LoginCtrl'
         })
         .state('register', {
-            url: '/register',
-            templateUrl: 'app/authentication/register.tpl.html',
-            controller: 'RegisterCtrl'
+          url: '/register',
+          templateUrl: 'app/authentication/register.tpl.html',
+          controller: 'RegisterCtrl'
+        })
+        .state('resume', {
+          url: '/resume',
+          templateUrl: 'app/resume/resume.tpl.html',
+          controller: 'ResumeCtrl'
         });
   } 
 })();
