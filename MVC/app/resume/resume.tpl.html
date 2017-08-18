@@ -1,0 +1,170 @@
+<!-- Summary -->
+<div class="container-fluid summary" id="summary" style="background-image: url('{{summary.background}}')">
+  <div class="row" ng-hide="summary.isEditing">
+    <div class="col-md-3 col-md-offset-3">
+      <img src="{{summary.profile}}" alt="Profile" class="img-responsive">
+    </div>
+    <div class="col-md-5">
+      <button ng-click="summary.edit()" class="btn btn-primary pull-right">Edit</button>
+      <h1>{{summary.name}}</h1>
+      <hr>
+      <h2>{{summary.title}}</h2>
+      <h2>{{summary.location}}</h2>
+      <h3>
+        <span class="glyphicon glyphicon-phone-alt"></span>
+        {{summary.phone}}
+      </h3>
+      <h3>
+        <span class="glyphicon glyphicon-envelope"></span>
+        {{summary.email}}
+      </h3>
+    </div>
+  </div>
+
+  <div class="row" ng-show="summary.isEditing">
+    <div class="col-md-6 col-md-offset-3 edit-summary">    
+      <button ng-click="summary.save()" class="btn btn-success pull-right">Save</button>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="summary.background" placeholder="Background">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="summary.profile" placeholder="Profile">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="summary.name" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="summary.title" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="summary.location" placeholder="Location">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="summary.phone" placeholder="Phone">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" ng-model="summary.email" placeholder="Email">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Skills -->
+<div class="container skills" id="skills">
+  <div class="row">
+    <h1 class="text-center">
+      Skills
+      <button ng-click="skills.edit()" ng-hide="skills.isEditing" class="btn btn-primary pull-right">Edit</button>
+      <button ng-click="skills.save()" ng-show="skills.isEditing" class="btn btn-success pull-right">Save</button>
+    </h1>
+  </div>
+  <div class="row" ng-hide="skills.isEditing">
+    <ul class="list-inline text-center">
+      <li ng-repeat="skill in skills">{{skill.skill}}</li>
+    </ul>
+  </div>
+  <div class="row" ng-show="skills.isEditing">
+    <ul class="list-inline text-center">
+      <li ng-repeat="skill in skills">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="skill.skill" placeholder="Skill">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-remove" ng-click="skills.remove(skill)">              
+          </span>
+        </div>
+      </li>
+    </ul>
+    <div class="text-center">
+      <button ng-click="skills.add()" class="btn btn-primary">Add Skill</button>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<!-- Experience -->
+<div class="container experience" id="experience">
+  <div class="row">
+    <h1 class="text-center">Experience</h1>
+  </div>
+  <!-- Entry -->
+  <div class="entry" ng-repeat="entry in experience">
+    <div class="row">
+      <div class="well">
+        <h1>
+          {{entry.title}} 
+          <span class="pull-right">
+            <small><em>{{entry.startYear}} - {{entry.endYear}}</em></small>
+          </span>
+        </h1>
+        <h2>{{entry.organization}}</h2>
+        <hr>
+        <ul>
+          <li ng-repeat="description in entry.descriptions">{{description}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<!-- Education -->
+<div class="container education" id="education">
+  <div class="row">
+    <h1 class="text-center">Education</h1>
+  </div>  
+  <!-- Entry -->
+  <div class="entry" ng-repeat="entry in education">
+    <div class="row">
+      <div class="well">
+        <h1>
+          {{entry.title}} 
+          <span class="pull-right">
+            <small><em>{{entry.startYear}} - {{entry.endYear}}</em></small>
+          </span>
+        </h1>
+        <h2>{{entry.organization}}</h2>
+        <hr>
+        <ul>
+          <li ng-repeat="description in entry.descriptions">{{description}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+
+<!-- Contact -->
+<div class="container contact" id="contact">
+  <div class="row">
+    <h1 class="text-center">Contact</h1>
+  </div>
+  <div class="row">
+    <form>
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+          <input type="text" class="form-control" placeholder="First Name">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+          <input type="text" class="form-control" placeholder="Last Name">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
+          <input type="email" class="form-control" placeholder="Email">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-phone-alt"></span></span>
+          <input type="text" class="form-control" placeholder="Phone">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <textarea class="form-control" rows=6></textarea>
+        <button type="submit" class="btn btn-primary btn-lg pull-right">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
