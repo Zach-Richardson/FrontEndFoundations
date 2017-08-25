@@ -5,28 +5,30 @@
     .module('app')
     .controller('SummaryCtrl', SummaryCtrl);
 
-  SummaryCtrl.$inject = ['$scope', 'ResumeService'];
+  SummaryCtrl.$inject = ['$scope', '$stateParams', 'APIService'];
 
-  function SummaryCtrl($scope, ResumeService) {
+  function SummaryCtrl($scope, $stateParams, APIService) {
 
-    $scope.summary = ResumeService.getSummary();
+    $scope.isEditingSummary = false;
+    $scope.editSummary = editSummary;
+    $scope.saveSummary = saveSummary;
+
+    $scope.summary = APIService.getSummary($stateParams.uid);
 
     activate();
 
     /////////////////////
 
     function activate() {
-      $scope.summary.isEditing = false;
-      $scope.summary.edit = editSummary;
-      $scope.summary.save = saveSummary;
+      $scope.summary.$bindTo($scope, 'summary');
     }
+
     function editSummary() {
-      $scope.summary.isEditing = true;
+      $scope.isEditingSummary = true;
     }
 
     function saveSummary() {
-      ResumeService.setSummary($scope.summary);
-      $scope.summary.isEditing = false; 
+      $scope.isEditingSummary = false; 
     }
   }
 })();

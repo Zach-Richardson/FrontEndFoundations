@@ -5,44 +5,36 @@
     .module('app')
     .controller('SkillsCtrl', SkillsCtrl);
 
-  SkillsCtrl.$inject = ['$scope', 'ResumeService'];
+  SkillsCtrl.$inject = ['$scope', '$stateParams', 'APIService'];
 
-  function SkillsCtrl($scope, ResumeService) {
+  function SkillsCtrl($scope, $stateParams, APIService) {
 
-    $scope.skills = ResumeService.getSkills();
+    $scope.isEditingSkills = false;
+    $scope.addSkill = addSkill;
+    $scope.editSkills = editSkills;
+    $scope.removeSkill = removeSkill;
+    $scope.saveSkills = saveSkills;
 
-    activate();
+    $scope.skills = APIService.getSkills($stateParams.uid);
 
     //////////////////////
 
-    function activate() {
-      $scope.skills.isEditing = false;
-      $scope.skills.add = addSkill;
-      $scope.skills.edit = editSkills;
-      $scope.skills.remove = removeSkill;
-      $scope.skills.save = saveSkills;
-    } 
-
     function addSkill() {
-      $scope.skills.push({id: $scope.skills.length+1, skill: ""});
+      $scope.skills.$add({id: $scope.skills.length+1, skill: ""});
     }
 
     function editSkills() {
-      $scope.skills.isEditing = true;
+      $scope.isEditingSkills = true;
     }
 
     function removeSkill(skill) {
-      $scope.skills.forEach((s, index) => {
-        if(s.id === skill.id) {
-          $scope.skills.splice(index, 1);
-        }
-      });
+      $scope.skills.$remove(skill);
 
     }
 
     function saveSkills() {
-      ResumeService.setSkills($scope.skills);
-      $scope.skills.isEditing = false; 
+      $scope.isEditingSkills = false; 
+      $scope.skills.forEach(skill => { $scope.skills.$save(skill) });
     }
   }
 })();

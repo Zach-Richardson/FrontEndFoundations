@@ -8,6 +8,7 @@
   AuthService.$inject = ['$firebaseAuth'];
 
   function AuthService($firebaseAuth) {
+
     return {
       isLoggedIn: isLoggedIn,
       login: login,

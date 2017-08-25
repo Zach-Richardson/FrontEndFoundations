@@ -20,7 +20,7 @@
           controller: 'RegisterCtrl'
         })
         .state('resume', {
-          url: '/resume/{id}',
+          url: '/resume/{uid}',
           templateUrl: 'app/resume/resume.tpl.html',
           controller: 'ResumeCtrl'
         });

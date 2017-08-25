@@ -5,12 +5,12 @@
     .module('app')
     .controller('ResumeCtrl', ResumeCtrl);
 
-  ResumeCtrl.$inject = ['$scope', 'ResumeService'];
+  ResumeCtrl.$inject = ['$scope', '$stateParams', 'APIService'];
 
-  function ResumeCtrl($scope, ResumeService) {
+  function ResumeCtrl($scope, $stateParams, APIService) {
 
-    $scope.education = ResumeService.getEducation();
-    $scope.experience = ResumeService.getExperience();
+    $scope.education = APIService.getEducation($stateParams.uid);
+    $scope.experience = APIService.getExperience($stateParams.uid);
     
   }
 })();
