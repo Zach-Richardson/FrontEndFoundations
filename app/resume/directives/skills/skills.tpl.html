@@ -1,0 +1,30 @@
+<div class="container skills" id="skills">
+  <div class="row">
+    <h1 class="text-center">
+      Skills
+      <button ng-click="editSkills()" ng-hide="isEditingSkills" class="btn btn-primary pull-right">Edit</button>
+      <button ng-click="saveSkills()" ng-show="isEditingSkills" class="btn btn-success pull-right">Save</button>
+    </h1>
+  </div>
+  <div class="row" ng-hide="isEditingSkills">
+    <ul class="list-inline text-center">
+      <li ng-repeat="skill in skills">{{skill.skill}}</li>
+    </ul>
+  </div>
+  <div class="row" ng-show="isEditingSkills">
+    <ul class="list-inline text-center">
+      <li ng-repeat="skill in skills">
+        <div class="input-group">
+          <input type="text" class="form-control" ng-model="skill.skill" placeholder="Skill">
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-remove" ng-click="removeSkill(skill)">              
+          </span>
+        </div>
+      </li>
+    </ul>
+    <div class="text-center">
+      <button ng-click="addSkill()" class="btn btn-primary">Add Skill</button>
+    </div>
+  </div>
+  <hr>
+</div>
